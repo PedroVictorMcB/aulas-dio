@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <style>
-        h1 {
-            color: red;
-        }
-    </style>
+
+    <!-- Aqui o professor sugere que use uma lib chamada normalize --- Procurar mais sobre Normalize.css -->
+
+    <!-- aprendi a vincular o css com o html -->
+    <link rel="stylesheet" href="./assests/css/global.css">
+
+    <!-- nesta etapa estou adicionando uma nova fonte ao site. Para isso busquei "google fonts" no google. E baixei as fontes necessárias, depois peguei o link incorporado e vinculei aqui como no link anterior -->
+
+    <!-- Fonte Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Carter+One&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    
 </head>
 <body>
-    <h1>Welcome to Pallet City</h1>
-    <p>
-        Here I'm learning with DIO's JS course the basics of web development
-    </p>
+   <section class="content">
+    <h1> Pokedex </h1>
 
-    <button id="btnTeste" type="button">
-        Enter into the Pokemon-World
-    </button>
+    <ol>
+        <li>
+            Bulbasaur
+        </li>
+        <li>
+            Ivysaur
+        </li>
+        <li>
+            Venusaur
+        </li>
+    </ol>
 
-    <script>
-        const btnTeste = document.getElementById("btnTeste");
+   </section>
 
-        btnTeste.addEventListener("click", function() {
-            console.log("Welcome to the Pokemon World!")
-        })
-    </script>
+    <!-- aprendi a vicular o js com o hmtl -->
+    <script src="./assests/js/main.js"></script>
 </body>
 </html>
