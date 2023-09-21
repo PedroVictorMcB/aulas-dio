@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Pallet City</h1>
+    <p>
+        Here I'm learning with DIO's JS course the basics of web development
+    </p>
+
+    <button id="btnTeste" type="button">
+        Enter into the Pokemon-World
+    </button>
+
+    <script>
+        const btnTeste = document.getElementById("btnTeste");
+
+        btnTeste.addEventListener("click", function() {
+            console.log("Welcome to the Pokemon World!")
+        })
+    </script>
+</body>
+</html>
