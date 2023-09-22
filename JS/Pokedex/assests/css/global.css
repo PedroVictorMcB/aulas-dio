@@ -18,3 +18,14 @@ ol.pokemons {
     padding: 0;
 }
 /* fr é equivalente a fraction, neste caso ele distribuiu as colunas em 50-50 */
+
+ol.pokemons li {
+    margin: .5rem;
+    padding: 2rem 1rem;
+    background-color: #14A06F;
+    color: white;
+    border-radius: 1rem;
+    height: 100px;
+}
+/* rem (medida relativa) usada para se adaptar facilmente a qualquer resolução, independente do dispositivo utilizado */
+
