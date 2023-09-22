@@ -1,0 +1,9 @@
+Antes de começar o projeto faça o setup seguindo o Primeiro e Segundo passo. Depois pode seguir da primeira versão em diante.
+
+Primeiro passo: Instale o NODEJS no seu PC
+
+Segundo passo: O professor recomenda que você instale a lib http-server, mas você pode usar o express, serviço gratuito da aws, ou fazer de outra maneira para subir um servidor local. Inclusive pode usar o github pages que é gratuito.
+
+No histórico de versão anterior, o professor recomendou que utilizemos o devtolls do google pelo chrome para visualizar como a aplicação ficaria no mobile. Essa técnica é chamada de Mobile First, algo assim. Consiste em desenvolver do micro para o macro
+
+Outra dica importante é que é habitual os devs de front começarem a estilização do site pelo chrome, para visualizar como o site está ficando. Depois de que verificou que as edições ficaram boas é que se replica esta estilização no css do projeto

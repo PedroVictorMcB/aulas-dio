@@ -9,3 +9,12 @@
 .content h1 {
     margin: 0;
 }
+
+ol.pokemons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* fr é equivalente a fraction, neste caso ele distribuiu as colunas em 50-50 */
