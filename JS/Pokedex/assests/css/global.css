@@ -2,71 +2,31 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+/* pesquisar mais sobre o que significa * no css */
+
+body {
+    background-color: #f6f8fc;
+}
 
 .content {
+    width: 100vw;
+    height: 100vh;
     padding: 1rem;
+    background-color: white;
 }
+/* pesquisar mais sobre vh no css */
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+/* centralização por auto: aplica a mesma quantidade de um lado e do outro, em relação ao espaço. Exemplo: height auto aplica x espaço no topo e x espaço no fundo. */
 
 .content h1 {
     margin: 0;
-}
-
-.pokemons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-/* fr é equivalente a fraction, neste caso ele distribuiu as colunas em 50-50 */
-
-.pokemon {
-    margin: .5rem;
-    padding: 1rem 1rem;
-    background-color: #49D0B0;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-/* rem (medida relativa) usada para se adaptar facilmente a qualquer resolução, independente do dispositivo utilizado */
-
-.pokemon .number {
-    color: black;
-    opacity: 0.3;
-    text-align: right;
-    font-size: .625rem;
-}
-
-.pokemon .name {
-    color: white;
-    margin-bottom: .25rem;
-}
-
-.pokemon .detail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.pokemon .detail .types {
-    margin: 0;
-    padding: 0;
-    list-style: none; 
-}
-
-.pokemon .detail .types .type {
-    background-color: #61e1ca;
-    color: white;
-    padding: .25rem .5rem;
-    font-size: .625rem;
-    margin: .25rem 0;
-    border-radius: 1rem;
-}
-.pokemon .detail img {
-    max-width: 100%;
-    height: 85px;
-    align-self: flex-end;
-    margin: .05rem .4rem;
 }
 
