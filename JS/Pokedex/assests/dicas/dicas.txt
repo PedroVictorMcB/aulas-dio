@@ -7,3 +7,39 @@ Segundo passo: O professor recomenda que você instale a lib http-server, mas vo
 No histórico de versão anterior, o professor recomendou que utilizemos o devtolls do google pelo chrome para visualizar como a aplicação ficaria no mobile. Essa técnica é chamada de Mobile First, algo assim. Consiste em desenvolver do micro para o macro
 
 Outra dica importante é que é habitual os devs de front começarem a estilização do site pelo chrome, para visualizar como o site está ficando. Depois de que verificou que as edições ficaram boas é que se replica esta estilização no css do projeto
+
+Dica 3: Estudar mais sobre o protocolo http, caso vá trabalhar com web
+
+Entendendo protocolo http:
+
+GERAL:
+
+1 - acesse uma página web e entre no devtools (f12).
+
+2- Selecione Network e em Name selecione uma opção de requisição para analisar.
+
+3 - Vá em Headers, na janela ao lado. na guia Geral você verá a requisição feita pelo browser; O método usado pela requisição; O status code (o retorno deste método). O código 200 no status code refere-se ao retorno com sucesso.
+
+URL PATH E MÉTODO:
+
+A URL é composta por IP/Path (é o caminho que serve para identificar o recurso).
+
+IP: https://seusite.com (Existe algum servidor de DNS faz a conversão de domínio para IP. Por isso o domínio é o IP na web).
+
+(PESQUISAR MAIS SOBRE IP E DOMÍNIO)
+
+<<SUPOSIÇÃO>> Acredito que o IP seja mesmo em formáto numérico, pois o local host é referenciado como números. Também no serviço gratuito da AWS o seu IP público é um número. Talvez este servidor dns sirva para converter estes números de IP para o domínio.
+No caso o que o servidor dns está fazendo nesta aula, é mostrar o IP original do domínio x.
+
+PATH: .../cadastro-de-cliente/cliente-joao-dos-anzois . É o caminho dos recursos. Cada recurso necessário compõe um path.
+
+Request Methods: Métodos de solicitações/requisições feitos para o servidor. Ou seja, toda requisição sobre um recurso, o método diz o que o usuário quer fazer com aquele recurso. Principalmente nas APIs padrão REST.
+
+
+GET: Com o IP/Path o servidor entende que você está solicitando/requisitando um recurso X, e lhe devolve o mesmo quando o encontra.
+
+POST: Com o IP/Path o servidor entende que você está solicitando/requisitando a INSERÇÃO de um item no recurso de destino.
+
+PUT: Com o IP/Path/(número de id) o servidor entende que você está solicitando/requisitando a ATUALIZAÇÃO de um  item dentro do recurso de destino.
+
+DELETE: Com o IP/Path/(número de id) o servidor entende que você está solicitando/requisitando a REMOÇÃO de um item dentro do recurso de destino.
