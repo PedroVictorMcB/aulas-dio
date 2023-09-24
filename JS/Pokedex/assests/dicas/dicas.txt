@@ -37,9 +37,53 @@ Request Methods: Métodos de solicitações/requisições feitos para o servidor
 
 
 GET: Com o IP/Path o servidor entende que você está solicitando/requisitando um recurso X, e lhe devolve o mesmo quando o encontra.
+- Significa que você está buscando alguma coisa.
+- Você pode filtrar a busca
 
 POST: Com o IP/Path o servidor entende que você está solicitando/requisitando a INSERÇÃO de um item no recurso de destino.
 
 PUT: Com o IP/Path/(número de id) o servidor entende que você está solicitando/requisitando a ATUALIZAÇÃO de um  item dentro do recurso de destino.
 
 DELETE: Com o IP/Path/(número de id) o servidor entende que você está solicitando/requisitando a REMOÇÃO de um item dentro do recurso de destino.
+
+A primeira área de transferência de dados é o próprio PATH 
+
+A segunda área de transferência de dados é a query string
+
+QUERY STRING: é uma espécie de parâmetro posta no após o PATH, com chave e valor. Ex: IP/PATH?(query string)type=grass
+- Contatenação de parâmetros no query string: adicione um & após o primeiro parâmetro e passe o novo parâmetro. Ex: IP/PATH?(query string)type=grass&name=i 
+
+REQUEST-HEADERS: São meta-dados(configurações) da requisição. A configuração da requisição é feita pelo browser (client).
+
+exemplo: accept-languages: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,gl;q=0.6
+
+Neste caso o cliente está especificando as prioridades de linguagens para aquela requisição. Tendo como 1, prioridade máxima, e seus sucessores, como 0.9, 0.8, 0.7 ... suas prioridades mínimas.
+pt-BR prioridade 1 = 1.0
+pt-PT prioridade 2 = 0.9
+en-US prioridade 3 = 0.8
+...
+gl(global) prioridade final = 0.6 (retorne qualquer linguagem, caso não tenha encontrado as linguagens de maior prioridade).
+
+RESPONSE-HEADERS: São as configurações devolvidas pelo servidor. Após a requisição do client estas são as devolutas do server.
+
+BODY: Dependendo do tipo de método usado, o body (área de dados) pode existir ou não. Ele é o corpo da requisição, o dados que será usado para realizar o tráfego. Pode-se entender como os dados que foram obtidos do servidor, a resposta própriamente dita.
+
+exemplo:
+
+request-header:
+content-type: applications/json
+
+request-body
+{
+    "name": "Galinhagartixa"
+}
+
+STATUS CODE: Retorna o estado da sua requisição
+
+família 200 - 299 (SUCESSO)
+
+família 300 - 399 (REDIRECT)
+
+família 400 - 499 (ERROR por parte do client)
+
+família 500 - 599 (ERROR interno no servidor)
