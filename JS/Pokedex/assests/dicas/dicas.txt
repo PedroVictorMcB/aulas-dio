@@ -87,3 +87,49 @@ família 300 - 399 (REDIRECT)
 família 400 - 499 (ERROR por parte do client)
 
 família 500 - 599 (ERROR interno no servidor)
+
+COMEÇANDO A CONFIGURAR O SCRIPT:
+
+1 - Criar uma requisição para o pokeapi usando a lib(library) Fetch API. Esta é uma lib padrão dos browsers.
+
+2 - Para saber mais como ela funciona busque no google.
+
+CRIANDO MÉTODO GET NO JS:
+
+1 - Utilize a URL como fonte de pesquisa da requisição. Para isso salve-a em uma variável
+
+2 - Criamos variáveis de controle da página e da quantidade de pokemons, estas são "offset" e "limit"
+
+3 - Criamos a function Fetch(url) que retorna uma promise (uma promessa de um retorno, caso todos os parâmetros sejam atendidos). Para chegar ao sucesso de uma promise, utilizamos o método ".then()".
+O Fetch por padrão usa o método GET. Também retorna por padrão uma string de dados em seu body.
+
+4 - para usar os dados do body, vamos precisar converter os dados do tipo string em json.
+
+5 - O response possui um método .json que retorna uma PROMISE de qualquer dado inserido. Resumindo, converte para o formato json a string recebida. Por o .json também ser uma PROMISE, você poderá ter a mesma estrutura do FETCH. Portanto poderá replicar o modelo de estrutura.
+
+6 - evite callbacks prolixos.
+
+ARROW FUNCTION: É uma sintaxe reduzida da definição de uma função.
+- muito utilizada em callbacks
+- se você tiver apenas uma linha como retorno, não precisa declarar o corpo da função.
+
+<<pesquisar mais sobre callback>>
+
+exemplo: da linha 6:11 no main.js na primeira versão do exercício.
+
+fetch(url)
+    .then(function(response) {
+        response.json().then(function (responseBody) {
+            console.log(responseBody);
+        })
+    })
+
+Uma solução mais elegante e legível seria esta, na segunda versão do exercício.
+
+
+
+Acesse o devtools >> guia Network >> Fetch/XHR (é onde acessamos todos os requests que criamos)
+
+lembre-se de desabilitar o cache na guia network 
+
+<<pesquisar mais sobre "Promise no HTTP PROTOCOL">>
