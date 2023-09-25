@@ -133,3 +133,15 @@ Acesse o devtools >> guia Network >> Fetch/XHR (é onde acessamos todos os reque
 lembre-se de desabilitar o cache na guia network 
 
 <<pesquisar mais sobre "Promise no HTTP PROTOCOL">>
+
+DEBUGANDO CÓDIGO JS NO BROWSER:
+- use a palavra reservada debugger no código e na hora de fazer o debugger no browser ele parará neste ponto.
+- debugger no browser:
+-- devtools >> Sources >> Page >> Encontre o arquivo JS lá dentro >> Clique na linha onde tem o debugger >> dê f5 >> na coluna ao lado terá uma setinha para avançar passo a passo no código 
+-degugger no browser com a key debugger:
+-- devtools >> source >> page >> encontre o arquivo JS lá dentro >> dê f5 (caso o arquivo já tenha sido aberto anteriormente) >> esc (para aparecer a guia console na parte inferior do browser) >> na coluna à direta tem os comando de passo a passo do debugger 
+
+CRIANDO <li> PELO JS DE FORMA AUTOMATIZADA:
+- no código HTML defina uma ID para um tipo de lista
+- no JS acesse o ID desta lista. Acessando o documento, usando o método getElementById, referenciando o ID do tipo da lista, no código HTML
+- para isso tudo ser realizado de fato, fiz uma variável no JS chamada pokemonList e adicionei um novo <li> a ela usando o a propriedade innerHTML
