@@ -155,3 +155,8 @@ MAP = função do JS para percorrer uma lista. Muito utilizada para fazer transf
 -- 1: como arrow function. Também por ter uma única linha como retorno.
 -- 2: devido as funções serem semelhantes, você pode coloca-las em uma unica linha adicionando o join ao final. exemplo ln 36
 -- resumindo o Map pegou obj por obj mandou para o convertPokemonToLI, este converteu de obj para <li>. Por final o método join unificou todas as <li> dentro de pokemonList no HTML.
+
+POKE-API.JS:
+- Promise.all(), isto recebe um array de promises.
+- getPokemons no return em Fetch(url)[RECAPTULANDO]:
+-- recebemos uma promise do server, convertemos para uma lista string de pokemons, convertemos esta lista para json para receber apenas o results. Depois de convertido para json, utilizamos a lista json e transfomamos esta em uma lista de promises de detalhes do pokemon. Tratamos esta lista de promises, feita por último, para vir como json.
