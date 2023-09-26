@@ -1,9 +1,4 @@
 
-const offset = 0;
-const limit = 10;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
-
-
 function convertPokemonToLI (pokemon) {
     return `
     <li class="pokemon">
@@ -25,31 +20,23 @@ console.log(document.getElementById("pokemonList"));
 
 const pokemonList = document.getElementById("pokemonList");
 
-fetch(url)
-    .then((response) => response.json())
-    // exemplo de arrow function na ln 7. Mais utilizado no mercado.
-    .then((jsonBody) => jsonBody.results)
-    .then((pokemons) => {
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            pokemonList.innerHTML += convertPokemonToLI(pokemon);
-
-        }
-    })
-    // then = caso tenha sucesso na resposta da requisição
-    .catch(function(error) {
-        console.log(error);
-    })
-    // catch = caso tenha algum erro na resposta da requisição
+pokeApi.getPokemons().then((pokemons = []) => {
     
-    // .finally(function() {
-    //     console.log("Requisição Concluída!")
-    // })
-    
-    // finally = responde independentemente se tem sucesso ou fracasso na resposta da requisição
+    const newList = pokemons.map((pokemon) => {
+        return convertPokemonToLI(pokemon)
+    })
 
-    // Esta estrutura acima é um modelo de uma interface de comunicação de uma PROMISE. Esta estrutura se assemelha com a estrutura de tratamento de erro Try-Catch.
-    // No try-catch o try equivale ao .then, o catch ao .catch e o finally ao .finally
+    const newHTML = newList.join('');
 
-// const x = 10 + 10;
-// console.log(x);
+    pokemonList.innerHTML += pokemons.map(convertPokemonToLI).join('');
+
+
+    // const listItems = [];
+    // for (let i = 0; i < pokemons.length; i++) {
+    //     const pokemon = pokemons[i];
+    //     listItems.push(convertPokemonToLI(pokemon));
+
+    // }
+
+    // console.log(listItems);
+})

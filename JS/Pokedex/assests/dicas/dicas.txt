@@ -145,3 +145,13 @@ CRIANDO <li> PELO JS DE FORMA AUTOMATIZADA:
 - no código HTML defina uma ID para um tipo de lista
 - no JS acesse o ID desta lista. Acessando o documento, usando o método getElementById, referenciando o ID do tipo da lista, no código HTML
 - para isso tudo ser realizado de fato, fiz uma variável no JS chamada pokemonList e adicionei um novo <li> a ela usando o a propriedade innerHTML
+
+MAIN.JS pokeApi.getPokemons().then(pokemons) => {...}
+- Aqui estamos fazendo uma conversão de objeto para HTML. O parâmetro que entra é do tipo obj e a saída é um <li> do tipo HTML.
+
+MAP = função do JS para percorrer uma lista. Muito utilizada para fazer transformação de listas.
+- reduz a verbosidade do for. Exemplo em main.js ln 30:31
+- a função convertPokemonToLI é feita com a essencia da função MAP por tanto podemos utiliza-la:
+-- 1: como arrow function. Também por ter uma única linha como retorno.
+-- 2: devido as funções serem semelhantes, você pode coloca-las em uma unica linha adicionando o join ao final. exemplo ln 36
+-- resumindo o Map pegou obj por obj mandou para o convertPokemonToLI, este converteu de obj para <li>. Por final o método join unificou todas as <li> dentro de pokemonList no HTML.
