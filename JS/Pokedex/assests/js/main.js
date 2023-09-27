@@ -1,22 +1,24 @@
 
-function convertPokemonTypesToLI (pokemonTypes) {
-    return pokemonTypes.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
-}
+// function convertPokemonTypesToLI (pokemonTypes) {
+//     return pokemonTypes.map((typeSlot) => `<li class="type">${type}</li>`)
+// }
+
+// ele retirou a função a cima pq? Perguntar pro Eduardo ou Rafael
 
 function convertPokemonToLI (pokemon) {
     return `
-    <li class="pokemon">
-        <span class="number">#${pokemon.order}</span>
-        <span class="name"> ${pokemon.name}</span>
-        
-        <div class="detail">
-            <ol class="types">
-                ${convertPokemonTypesToLI(pokemon.types).join('')}
-            </ol>
-            <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name} image">
-        </div>
-    </li>
-    `
+        <li class="pokemon ${pokemon.type}">
+            <span class="number">#${pokemon.numberOrder}</span>
+            <span class="name"> ${pokemon.name}</span>
+            
+            <div class="detail">
+                <ol class="types">
+                    ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
+                </ol>
+                <img src="${pokemon.photo}" alt="${pokemon.name} image">
+            </div>
+        </li>
+        `
 }
 
 console.log(document.getElementById("pokemonList"));
