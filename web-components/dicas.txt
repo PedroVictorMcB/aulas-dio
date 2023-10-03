@@ -1,3 +1,7 @@
+DICA DE LEITURA:
+
+Confira sempre no github o que foi inserido nos commits e onde. Posso simplesmente adicionar mais informação a um tópico antigo, sem ter a necessidade de recriar um tópico existente. Uma vez que estou utilizando o github para controlar minhas versões, e não faz sentido ir contra a idéia principal da ferramenta.
+
 WEB COMPONENTS:
 
   Extensão para baixar no vscode: tldraw
@@ -11,14 +15,21 @@ WEB COMPONENTS:
 
   SHADOW D.O.M: Boa parte dos navegadores já permitem isso. É a possibilidade de criar uma árvore dentro da árvore.
   A diferença de uma DOM pra o SHADOW DOM é que no shadow você tem total controle da árvore. Serve para tratar o DOM de forma encapsulada. Pode-se trabalhar com o elementos do DOM a partir de uma única ramificação, a SHADOW DOM.
+   
+   - Vantagens:
+   As árvores fantasmas são singulares a um único componente. Ou seja, podemos personalizar um único componente por vez, e ter uma variedade de funcionalidades personalizadas em nosso html, de forma dinâmica.
 
   DEFININDO UM COMPONENTE:
-   - Todo componente é um conjunto de elementos, que executa determinada função.
+   - Todo componente é uma função JavaScript que vai retornar, JS, HTML e CSS. Também é um conjunto de elementos
 
    -CRIANDO UM CLASS COMPONENT:
     -Fizemos uma classe que herda HTMLElement, fizemos o método construtor, invocamos o super, e definimos como atributo a const shadow, com o valor referente na linha 5. 
     O modo de attachShadow pode ser closed ou open. Closed permite apenas que modificações seja feitas dentro do mesmo arquivo js. Open permite que outros JSs interajam com esta classe. Similar ao private e public no JAVA.
 
-    -Criamos um método chamado customElements na linha 9 que recebe o att card-news e usa a classe CardNews. Com isso criamos nossa primeira tag HTML personalizada.
+    -Criamos um método chamado customElements na linha 9 que recebe o att card-news e usa a classe CardNews. Este método pede sempre que você separe os nomes de sua tag com-hífen, para poder diferenciar das tags padrões. Com isso criamos nossa primeira tag HTML personalizada.
 
   Após a criação do component você pode verificar no console do chrome acessando o document, que o shadow dom foi criado, e utilizado sem alterar o documento html no index.html.
+
+  CRIANDO UM ATRIBUTO/PROP PARA O COMPONENTE:
+  - Setamos o atributo na linha 9 do TituloDinamico.js
+  - Definimos o atributo no index.js na linha 27.
