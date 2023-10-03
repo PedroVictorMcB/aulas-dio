@@ -1,0 +1,24 @@
+WEB COMPONENTS:
+
+  Extensão para baixar no vscode: tldraw
+
+  CAN I USE: site que auxilia os frontenders
+
+  D.O.M.: Document Objetc Model
+   - modelo de árvore, um tronco e várias ramificações
+   - hierarquia de elementos:
+    - Onde há um elemento principal, em nosso inde.html é a div container, e suas ramificações são os elementos secundários que derivão desta div, estão dentro.
+
+  SHADOW D.O.M: Boa parte dos navegadores já permitem isso. É a possibilidade de criar uma árvore dentro da árvore.
+  A diferença de uma DOM pra o SHADOW DOM é que no shadow você tem total controle da árvore. Serve para tratar o DOM de forma encapsulada. Pode-se trabalhar com o elementos do DOM a partir de uma única ramificação, a SHADOW DOM.
+
+  DEFININDO UM COMPONENTE:
+   - Todo componente é um conjunto de elementos, que executa determinada função.
+
+   -CRIANDO UM CLASS COMPONENT:
+    -Fizemos uma classe que herda HTMLElement, fizemos o método construtor, invocamos o super, e definimos como atributo a const shadow, com o valor referente na linha 5. 
+    O modo de attachShadow pode ser closed ou open. Closed permite apenas que modificações seja feitas dentro do mesmo arquivo js. Open permite que outros JSs interajam com esta classe. Similar ao private e public no JAVA.
+
+    -Criamos um método chamado customElements na linha 9 que recebe o att card-news e usa a classe CardNews. Com isso criamos nossa primeira tag HTML personalizada.
+
+  Após a criação do component você pode verificar no console do chrome acessando o document, que o shadow dom foi criado, e utilizado sem alterar o documento html no index.html.
