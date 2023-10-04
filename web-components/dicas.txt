@@ -27,9 +27,17 @@ WEB COMPONENTS:
     O modo de attachShadow pode ser closed ou open. Closed permite apenas que modificações seja feitas dentro do mesmo arquivo js. Open permite que outros JSs interajam com esta classe. Similar ao private e public no JAVA.
 
     -Criamos um método chamado customElements na linha 9 que recebe o att card-news e usa a classe CardNews. Este método pede sempre que você separe os nomes de sua tag com-hífen, para poder diferenciar das tags padrões. Com isso criamos nossa primeira tag HTML personalizada.
+    
+    -Sempre que criar um elemento lembre-se de "apadrinhar"(1) com um elemento child. Exemplo: CardNews.js ln 22:24, ln 29:30.
 
   Após a criação do component você pode verificar no console do chrome acessando o document, que o shadow dom foi criado, e utilizado sem alterar o documento html no index.html.
 
   CRIANDO UM ATRIBUTO/PROP PARA O COMPONENTE:
   - Setamos o atributo na linha 9 do TituloDinamico.js
-  - Definimos o atributo no index.js na linha 27.
+  - Definimos o atributo "titulo" no index.js
+  - Criamos e setamos atributos no elemento <card-news> no index.js
+
+
+Glossário:
+  
+  1 - Apadrinhar: Os elementos childs são elementos filhos de outros elementos (os elementos pai). Por tanto posso usar este termo apadrinhar, já que você está atribuindo uma classe de filho para tal elemento.
