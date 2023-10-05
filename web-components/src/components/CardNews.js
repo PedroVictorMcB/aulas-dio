@@ -18,8 +18,7 @@ class CardNews extends HTMLElement {
         const autor = document.createElement("span");
         autor.textContent = "By " + (this.getAttribute("autor") || "Anonymous"); //criamos um comportamente reativo
 
-        // const titleH1 = document.createElement("h1");   investigar como deixar o texto bold com a tag h1
-        // titleH1.textContent = this.getAttribute("title");
+        const titleH1 = document.createElement("h1");
 
         const linkTitle = document.createElement("a");
         linkTitle.textContent = this.getAttribute("title");
@@ -29,8 +28,8 @@ class CardNews extends HTMLElement {
         newContent.textContent = this.getAttribute("content");
 
         cardLeft.appendChild(autor);
-        // cardLeft.appendChild(titleH1);
-        cardLeft.appendChild(linkTitle);
+        cardLeft.appendChild(titleH1);
+        titleH1.appendChild(linkTitle);
         cardLeft.appendChild(newContent);
 
         const cardRight = document.createElement("div"); //Elemento distinto
