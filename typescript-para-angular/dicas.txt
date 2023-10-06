@@ -1,0 +1,4 @@
+INSTALADOR DO TYPESCRIPT: https://www.typescriptlang.org/download
+
+INSTALANDO TYPESCRIPT POR PROJETO:
+ - Passo 1: crie um projeto node com o comando $ npm init -y
