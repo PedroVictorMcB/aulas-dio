@@ -2,3 +2,11 @@ INSTALADOR DO TYPESCRIPT: https://www.typescriptlang.org/download
 
 INSTALANDO TYPESCRIPT POR PROJETO:
  - Passo 1: crie um projeto node com o comando $ npm init -y
+ - Passo 2: instale o typescript via cmd line $ npm install typescript --save-dev
+
+UTILIZANDO TYPESCRIPT:
+ - Para rodar um programa em TS você precisa transcrever para JS usando o comando no terminal: $ npx tsc arquivo
+ - Ao criar uma função em TS, esta será replicada em JS, após o compilamento (comando na linha anterior). Isso resultará em erro no TS.
+
+CARACTERÍSTICAS DO NODE:
+ - O node não roda arquivo com extensão .ts
