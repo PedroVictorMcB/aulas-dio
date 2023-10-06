@@ -20,3 +20,7 @@ TYPESCRIPT CONFIGURAÇÃO:
   - Em package.json:
    - Dentro de "script", coloque "start": "npx tsc && node build/index.js",
   - Agora execute o comando no terminal $ npm run start
+
+DECLARANDO VARIÁVEL EM TS:
+ - Você deve colocar o tipo da variável, o nome, o tipo da variável e o valor.
+ - Modelo de declarações de variáveis no index.ts 
