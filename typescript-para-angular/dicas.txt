@@ -10,3 +10,13 @@ UTILIZANDO TYPESCRIPT:
 
 CARACTERÍSTICAS DO NODE:
  - O node não roda arquivo com extensão .ts
+
+TYPESCRIPT CONFIGURAÇÃO:
+ - $ npx tsc --init
+ - O cmd acima gera um arquivo de configuração que você irá configurar para como ele deve se comportar no seu projeto
+ - Dentro do arquivo você poderá editar as pré-configurações do seu TS.
+ - Neste projeto habilitamos o "'rootDir:' './src'" e o "'outDir:' './build'". Os detalhas do que cada config faz estão especificados no comentário ao lado dentro do arquivo
+ - Para rodar o arquivo assim que ele for compilado faça:
+  - Em package.json:
+   - Dentro de "script", coloque "start": "npx tsc && node build/index.js",
+  - Agora execute o comando no terminal $ npm run start
