@@ -37,6 +37,15 @@ WEB COMPONENTS:
   - Definimos o atributo "titulo" no index.js
   - Criamos e setamos atributos no elemento <card-news> no index.js
 
+  O QUE É TYPESCRIPT:
+   - A grosso modo TypeScript é um pack de funcionalidades extras do JS. Uma "DLC" do JS, o plus do JS.
+   - É possível tipar suas variáveis com o TS.
+   - As classes tem mais poder
+    - É possível criar Interfaces com o TS, a partir de uma classe 
+    - ENUMS
+   - Trabalha com o processo de Transpilação. Ele compila para JS no final do processo.
+
+
 
 Glossário:
   
