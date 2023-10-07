@@ -24,3 +24,10 @@ TYPESCRIPT CONFIGURAÇÃO:
 DECLARANDO VARIÁVEL EM TS:
  - Você deve colocar o tipo da variável, o nome, o tipo da variável e o valor.
  - Modelo de declarações de variáveis no index.ts 
+ - Variável do tipo Objeto:
+  - É aquela que recebe qualquer Objeto como valor.
+  - Você pode declarar Objetos de duas formas no TS:
+   - Sem previsibilidade
+   - Com previsibilidade
+   - As duas maneiras estão comentadas no index.ts
+   
