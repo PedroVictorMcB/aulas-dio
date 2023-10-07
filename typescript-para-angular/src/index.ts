@@ -14,18 +14,32 @@ let indefinido : undefined = undefined;
 let retorno:void; //usada em funções com retorno do tipo vazio
 let retornoView:any = false; //retorno booleano
 
-// type heroi = {
-//     name: string;
-//     vulgo: string;
-// };
+//objeto - sem previsibilidade
+let identidade: object = {
+    name: "Ricther Belmont",
+    pais: "França",
+    idade: "17", 
+}
 
-// function printaObj(pessoa: heroi) {
-//     console.log(pessoa);
-// }
+//objeto tipado - com previsibilidade
+type ProdutoLoja = {
+    nome: string;
+    preco: number;
+    unidades: number;
+}
 
-// printaObj({
-//     name: "Peter Parker",
-//     vulgo: "Spider-Man",
-// });
+let meuProduto: ProdutoLoja = {
+    nome: "Calça",
+    preco: 119.90,
+    unidades: 10,
+}
 
-// console.log("Hello TypeScript!")
+//Arrays simples
+
+let nomes: string[] = ["Ricther", "Morbius", "Blade", "Edward"];
+
+let nomes2: Array<string> = ["Alucard", "Peter", "Inimigo do Blade", "Lobinho"];
+
+//Arrays de Multitipos
+
+let nomePoder: (string | number)[] = ["Peter", 60, "Alucard", 80, "Terminator", 140];
