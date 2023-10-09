@@ -22,6 +22,15 @@ let meuProduto = {
     preco: 119.90,
     unidades: 10,
 };
-//Arrays
+//Arrays simples
 let nomes = ["Ricther", "Morbius", "Blade", "Edward"];
-console.log(nomes);
+let nomes2 = ["Alucard", "Peter", "Inimigo do Blade", "Lobinho"];
+//Arrays de Multitipos
+let nomePoder = ["Peter", 60, "Alucard", 80, "Terminator", 140, 220];
+//Tuplas
+let boleto = ["agua conta", 199.90, 32289];
+//Arrays Métodos
+//Todos os métodos do JS são reutilizados no TS
+//Dates
+let aniversario = new Date("1970-10-30 03:00");
+console.log(aniversario.toString);
