@@ -42,4 +42,8 @@ let nomes2: Array<string> = ["Alucard", "Peter", "Inimigo do Blade", "Lobinho"];
 
 //Arrays de Multitipos
 
-let nomePoder: (string | number)[] = ["Peter", 60, "Alucard", 80, "Terminator", 140];
+let nomePoder: (string | number)[] = ["Peter", 60, "Alucard", 80, "Terminator", 140, 220];
+
+//Tuplas
+
+let boleto:[string, number, number] = ["agua conta", 199.90, 32289]
