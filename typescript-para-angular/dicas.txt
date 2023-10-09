@@ -31,3 +31,8 @@ DECLARANDO VARIÁVEL EM TS:
    - Com previsibilidade
    - As duas maneiras estão comentadas no index.ts
    
+TUPLAS:
+ - São vetor de multi-types com valores específicos (um lugar certo para cada coisa)
+ - Só podem receber a quantidade exata de valores, pré-definidas pela tupla.
+ - Caso você coloque mais valores do que a tupla suporta, ocorrerá em erro.
+ - Caso a ordem dos valores atribuidos à tupla não sejam equivalentes aos tipos pré-definidos da tupla, ocorrerá em erro.
