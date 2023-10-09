@@ -47,3 +47,11 @@ let nomePoder: (string | number)[] = ["Peter", 60, "Alucard", 80, "Terminator", 
 //Tuplas
 
 let boleto:[string, number, number] = ["agua conta", 199.90, 32289]
+
+//Arrays Métodos
+//Todos os métodos do JS são reutilizados no TS
+
+//Dates
+
+let aniversario: Date = new Date("1970-10-30 03:00");
+console.log(aniversario.toString); // por algum motivo o print não deu certo. Me aprofundar mais nisto.
