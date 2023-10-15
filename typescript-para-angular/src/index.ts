@@ -55,3 +55,21 @@ let boleto:[string, number, number] = ["agua conta", 199.90, 32289]
 
 let aniversario: Date = new Date("1970-10-30 03:00");
 console.log(aniversario.toString); // por algum motivo o print não deu certo. Me aprofundar mais nisto.
+
+//funções
+//A única diferença da função em TS para JS é que em TS você pode tipar a função
+//Variáveis que recebem uma função tipada, precisam receber a mesma tipagem da função
+
+//declaração de função tipada explicita
+function addNumber(x: number, y: number): number {
+    return x + y
+}
+
+function helloName(name: string) {
+    return `Hello ${name}`;
+}
+
+let soma: number = addNumber(4, 7);
+let ola: string = helloName("Pedro")
+
+console.log(`${ola}! A soma é = ${soma}`);
