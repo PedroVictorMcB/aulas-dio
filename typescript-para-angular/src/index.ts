@@ -56,7 +56,7 @@ let boleto:[string, number, number] = ["agua conta", 199.90, 32289]
 let aniversario: Date = new Date("1970-10-30 03:00");
 console.log(aniversario.toString); // por algum motivo o print não deu certo. Me aprofundar mais nisto.
 
-//funções
+//Funções
 //A única diferença da função em TS para JS é que em TS você pode tipar a função
 //Variáveis que recebem uma função tipada, precisam receber a mesma tipagem da função
 
@@ -65,6 +65,7 @@ function addNumber(x: number, y: number): number {
     return x + y
 }
 
+//declaração de função implicita
 function helloName(name: string) {
     return `Hello ${name}`;
 }
@@ -72,4 +73,22 @@ function helloName(name: string) {
 let soma: number = addNumber(4, 7);
 let ola: string = helloName("Pedro")
 
-console.log(`${ola}! A soma é = ${soma}`);
+//Funções Multitipos
+//A função multitipos recebe mais de um tipo com auxílio de operadores lógicos
+//No TS o opr lógico OU pode ser representado apenas com um | ao invés de ||
+
+//declaração explicita de dois tipos
+function callToPhone(phone: number | string): number | string {
+    return phone;
+}
+
+//declaração explicita de qualquer tipo
+function saveContact(phone: number | string, name: string, male: boolean): any {
+    return console.log(`Nome ${name}\nTelefone ${phone}\nHomen ${male}`);
+}
+
+//caso utilize uma função multitipos em uma variável, esta deverá ser multitipos também
+let phone1: number | string = callToPhone(11903021);
+
+//neste console.log quando chamamos a função podemos declarar tanto número quanto string
+console.log(callToPhone("oito, " + 6 + ", cinco, " + 3), phone1);
