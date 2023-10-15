@@ -33,4 +33,17 @@ let boleto = ["agua conta", 199.90, 32289];
 //Todos os métodos do JS são reutilizados no TS
 //Dates
 let aniversario = new Date("1970-10-30 03:00");
-console.log(aniversario.toString);
+console.log(aniversario.toString); // por algum motivo o print não deu certo. Me aprofundar mais nisto.
+//funções
+//A única diferença da função em TS para JS é que em TS você pode tipar a função
+//Variáveis que recebem uma função tipada, precisam receber a mesma tipagem da função
+//declaração de função tipada explicita
+function addNumber(x, y) {
+    return x + y;
+}
+function helloName(name) {
+    return `Hello ${name}`;
+}
+let soma = addNumber(4, 7);
+let ola = helloName("Pedro");
+console.log(`${ola}! A soma é = ${soma}`);
