@@ -91,4 +91,15 @@ function saveContact(phone: number | string, name: string, male: boolean): any {
 let phone1: number | string = callToPhone(11903021);
 
 //neste console.log quando chamamos a função podemos declarar tanto número quanto string
-console.log(callToPhone("oito, " + 6 + ", cinco, " + 3), phone1);
+// console.log(callToPhone("oito, " + 6 + ", cinco, " + 3), phone1);
+// console.log(saveContact(90909921, "João Neves", true));
+
+//Funções Assincronas
+//Sempre que você declara uma função async, deve-se retornar uma promise
+
+//O caso multitype pode ser aplicado aqui também
+async function getDataBase(id: number): Promise<string> {
+    return "Pedro Víctor";
+}
+
+// console.log(getDataBase(10));
