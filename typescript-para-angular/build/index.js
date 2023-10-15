@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 // definindo variáveis primitivas
 let desliga = false; //definida por tipagem. Neste caso ele só pode receber valor booleano
 let liga = true; //definida por inferencia. Mas neste caso ele pode receber qualquer outro valor
@@ -61,4 +70,14 @@ function saveContact(phone, name, male) {
 //caso utilize uma função multitipos em uma variável, esta deverá ser multitipos também
 let phone1 = callToPhone(11903021);
 //neste console.log quando chamamos a função podemos declarar tanto número quanto string
-console.log(callToPhone("oito" + 6 + "cinco" + 3), phone1);
+// console.log(callToPhone("oito, " + 6 + ", cinco, " + 3), phone1);
+// console.log(saveContact(90909921, "João Neves", true));
+//Funções Assincronas
+//Sempre que você declara uma função async, deve-se retornar uma promise
+//O caso multitype pode ser aplicado aqui também
+function getDataBase(id) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return "Pedro Víctor";
+    });
+}
+console.log(getDataBase(10));
