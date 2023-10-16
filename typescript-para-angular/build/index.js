@@ -80,4 +80,21 @@ function getDataBase(id) {
         return "Pedro Víctor";
     });
 }
-console.log(getDataBase(10));
+// const bot: robot = {
+//     id: 1,
+//     name: "Zero"
+// }
+// console.log(bot.id = "X"); //exemplo do readonly ativo
+// console.log(bot.name = "Megaman")
+//Se você declarar o método na interface, mas não utilizar na classe. O nome da classe ficará grifado como erro. Selecione "quick fix" para criar o método automaticamente
+class Android {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    sayHello() {
+        return `Hello! I'm ${this.name}!`;
+    }
+}
+const droid = new Android(3, "Foxy Girl");
+console.log(droid.sayHello());
