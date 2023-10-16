@@ -103,3 +103,43 @@ async function getDataBase(id: number): Promise<string> {
 }
 
 // console.log(getDataBase(10));
+
+//INTERFACES
+//Muito utilizada para tipar classes. Seu formato de declaração é identico ao do type
+//É como se fosse um contrato para a classe e quem herdar tal classe precisa utilizá-lo
+//Os atributos da inteface também aceitam a declaração multtype e possuiem uma propriedade chamada "readonly" (serve para apenas leitura. Após criada a variável/obj não é possível modificá-la posteriormente)
+//Na declaração de interface você também pode implementar um método
+//Type ou Interface são compilados sempre no mesmo arquivo que você está trabalhando. Ou seja, eles possuem um valor semântico.
+
+interface robot {
+    readonly id: number | string;
+    name: string;
+    sayHello(): string;
+}
+
+const bot: robot = {
+    id: 1,
+    name: "Zero"
+}
+
+
+console.log(bot.id = "X"); //exemplo do readonly ativo
+console.log(bot.name = "Megaman")
+
+//Se você declarar o método na interface, mas não utilizar na classe. O nome da classe ficará grifado como erro. Selecione "quick fix" para criar o método automaticamente
+class Android implements robot {
+    id: number | string;
+    name: string;
+
+    constructor(id: number | string, name: string) {
+        this.id = id;
+        this.name = name;
+    }
+    
+    sayHello(): string {
+        return `Hello! I'm ${this.name}!`;
+    }
+}
+
+const droid = new Android (3, "Foxy Girl");
+console.log(droid.sayHello());
