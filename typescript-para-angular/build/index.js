@@ -111,8 +111,43 @@ class Character {
     }
 }
 const charcter1 = new Character(50, 100);
-//atribuimos um valor ao name. Mas você pode testar comentar as linhas 168:169 e rodar o código para ver que não muda nada na declaração do character1
+//atribuimos um valor ao name. Mas você pode testar comentar a linha 169:170 e rodar o código para ver que não muda nada na declaração do character1. Teste comentar a 168 também para ver as diferentes declarações possíveis
 charcter1.name = "Ryu";
 // console.log(charcter1.name);
 // charcter1.attack();
 console.log(charcter1);
+/*
+Data Modifiers
+
+Usaando em classes:
+public - todos tem acesso aquele atributo. Comportamento padrão
+private - só pode ser acessado dentro da classe
+protected - O att pode ser acessado apenas pela própria classe e subclasses que herdem esta classe
+
+Usando em Métodos:
+Você pode usar em métodos também
+*/
+class SecretID {
+    constructor(heroName, name, age) {
+        this.heroName = heroName;
+        this.name = name;
+        this.age = age;
+    }
+    helloHero() {
+        console.log(`Hello ${this.heroName}! Or I would say ${this.name}?`);
+    }
+}
+const hero = new SecretID("Spider-Man", "Miles Morales", 17);
+//o modificador protected usando no método "helloHero()" impede que outra pessoa possa acessá-lo de fora da classe. Tente acessá-la na linha seguinte usando: hero. ; e veja se o método aparece como sugestão
+//teste aqui
+//SUBCLASSES
+//É uma classe que herda propriedades da superclass(classe pai) e acrescenta novos atributos na mesma.
+class heroID extends SecretID {
+    constructor(heroName, name, age, mutant, multverse) {
+        super(heroName, name, age);
+        this.mutant = mutant;
+        this.multverse = multverse;
+    }
+}
+const EdBrock = new heroID("Venom", "Ed Brock", 30, false, "Terra " + 145);
+console.log(EdBrock);
