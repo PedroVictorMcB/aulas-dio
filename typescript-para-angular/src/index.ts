@@ -117,14 +117,14 @@ interface robot {
     sayHello(): string;
 }
 
-const bot: robot = {
-    id: 1,
-    name: "Zero"
-}
+// const bot: robot = {
+//     id: 1,
+//     name: "Zero"
+// }
 
 
-console.log(bot.id = "X"); //exemplo do readonly ativo
-console.log(bot.name = "Megaman")
+// console.log(bot.id = "X"); //exemplo do readonly ativo
+// console.log(bot.name = "Megaman")
 
 //Se você declarar o método na interface, mas não utilizar na classe. O nome da classe ficará grifado como erro. Selecione "quick fix" para criar o método automaticamente
 class Android implements robot {
@@ -142,4 +142,30 @@ class Android implements robot {
 }
 
 const droid = new Android (3, "Foxy Girl");
-console.log(droid.sayHello());
+// console.log(droid.sayHello());
+
+//CLASSES
+//A classe é uma forma que pode ser utilizada para criar novos objetos no mesmo formato
+
+class Character {
+    name?: string;  //atributo definido como opcional
+    strength: number;
+    skill: number;
+
+    constructor(strength: number, skill: number) {
+        this.strength = strength;
+        this.skill = skill;
+    }
+
+    //como o tipo de retorno é vazio e estamos retornando uma ação podemos apenas chamar o método no código
+    attack(): void {
+        console.log(`Attack with ${this.strength} points`)
+    }
+}
+
+const charcter1 = new Character(50, 100);
+//atribuimos um valor ao name. Mas você pode testar comentar a linha 169:170 e rodar o código para ver que não muda nada na declaração do character1. Teste comentar a 168 também para ver as diferentes declarações possíveis
+charcter1.name = "Ryu";
+// console.log(charcter1.name);
+// charcter1.attack();
+console.log(charcter1);
