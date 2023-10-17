@@ -240,7 +240,7 @@ const strArray = concatArray<string[]>(["Pedro", "Peter"], ["Stein"])
 // console.log(numArray);
 
 let info: string = "Pedrovsky";
-console.log(info);
+// console.log(info);
 
 //DECORATORS
 //É o ato de programar uma função que é executada em função de uma flag.
@@ -259,3 +259,17 @@ class Funcionario {}
 class DonoDoComercio {}
 
 //Para utilizar o decorator faça como mostrado acima. Declare como você vê e o utilize sempre uma linha acima da classe/objt/variável que servirá como gatilho para ativar o decorator
+
+
+//CLASS DECORATOR
+//Usando decorators em classes podemos injetar dinamicamente uma propriedade à uma classe
+function apiVersion(version: string) {
+    return (target: any) => {
+        Object.assign(target.prototype, {__version: version});
+    };
+}
+@apiVersion("1.10")
+class Api {}
+
+const api = new Api();
+console.log(api.__version);
