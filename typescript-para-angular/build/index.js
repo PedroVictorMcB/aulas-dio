@@ -97,4 +97,22 @@ class Android {
     }
 }
 const droid = new Android(3, "Foxy Girl");
-console.log(droid.sayHello());
+// console.log(droid.sayHello());
+//CLASSES
+//A classe é uma forma que pode ser utilizada para criar novos objetos no mesmo formato
+class Character {
+    constructor(strength, skill) {
+        this.strength = strength;
+        this.skill = skill;
+    }
+    //como o tipo de retorno é vazio e estamos retornando uma ação podemos apenas chamar o método no código
+    attack() {
+        console.log(`Attack with ${this.strength} points`);
+    }
+}
+const charcter1 = new Character(50, 100);
+//atribuimos um valor ao name. Mas você pode testar comentar as linhas 168:169 e rodar o código para ver que não muda nada na declaração do character1
+charcter1.name = "Ryu";
+// console.log(charcter1.name);
+// charcter1.attack();
+console.log(charcter1);
