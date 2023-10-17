@@ -115,7 +115,7 @@ const charcter1 = new Character(50, 100);
 charcter1.name = "Ryu";
 // console.log(charcter1.name);
 // charcter1.attack();
-console.log(charcter1);
+// console.log(charcter1);
 /*
 Data Modifiers
 
@@ -150,4 +150,13 @@ class heroID extends SecretID {
     }
 }
 const EdBrock = new heroID("Venom", "Ed Brock", 30, false, "Terra " + 145);
-console.log(EdBrock);
+// console.log(EdBrock);
+//GENERICS
+//funções que aceitam qualquer coisa, any.
+function concatArray(...itens) {
+    return new Array().concat(...itens);
+}
+const numArray = concatArray([1, 5], [3]);
+const strArray = concatArray(["Pedro", "Peter"], ["Stein"]);
+numArray.push("Stein");
+console.log(numArray);
