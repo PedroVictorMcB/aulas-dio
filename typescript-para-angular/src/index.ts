@@ -241,3 +241,21 @@ const strArray = concatArray<string[]>(["Pedro", "Peter"], ["Stein"])
 
 let info: string = "Pedrovsky";
 console.log(info);
+
+//DECORATORS
+//É o ato de programar uma função que é executada em função de uma flag.
+//Exemplo: Sua mãe lhe diz que sempre que você ver o leite com o valor de R$ 3,00 ou menos, compre.
+//Você está voltando para sua casa num dia qualquer e passou na frente de um comercio local. Neste dia o leite estava à R$ 3,00. Você compra automaticamente.
+
+function ExibirNome(target: any) {
+    console.log(target);
+}
+
+//Após usar a função com @ vá em ts.config e habilite experimentalDecorators descomentando
+@ExibirNome
+class Funcionario {}
+
+@ExibirNome
+class DonoDoComercio {}
+
+//Para utilizar o decorator faça como mostrado acima. Declare como você vê e o utilize sempre uma linha acima da classe/objt/variável que servirá como gatilho para ativar o decorator
