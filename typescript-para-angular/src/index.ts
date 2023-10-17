@@ -165,10 +165,12 @@ class Character {
 
 const charcter1 = new Character(50, 100);
 //atribuimos um valor ao name. Mas você pode testar comentar a linha 169:170 e rodar o código para ver que não muda nada na declaração do character1. Teste comentar a 168 também para ver as diferentes declarações possíveis
+
 charcter1.name = "Ryu";
 // console.log(charcter1.name);
 // charcter1.attack();
-console.log(charcter1);
+// console.log(charcter1);
+
 /*
 Data Modifiers
 
@@ -218,4 +220,21 @@ class heroID extends SecretID {
 
 const EdBrock = new heroID("Venom", "Ed Brock", 30, false, "Terra " + 145);
 
-console.log(EdBrock);
+// console.log(EdBrock);
+
+//GENERICS
+//para trazer dinamicidade e tornar a função genérica você de adicionar um tipo como propriedade para ser inserido posteriormente, na declaração da função.
+
+
+function concatArray<T>(...itens: T[]):T[]{
+    return new Array().concat(...itens);
+}
+
+//Usando a função e atribuindo o tipo number na hora
+const numArray = concatArray<number[]>([1, 5], [3]);
+
+//Usando a função e atribuindo o tipo string na hora
+const strArray = concatArray<string[]>(["Pedro", "Peter"], ["Stein"])
+
+// numArray.push("Stein"); //Exemplo de erro. Desmarque o numArray.push para visualizar o erro
+console.log(numArray);
