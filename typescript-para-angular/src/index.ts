@@ -201,3 +201,21 @@ const hero = new SecretID("Spider-Man", "Miles Morales", 17);
 
 //o modificador protected usando no método "helloHero()" impede que outra pessoa possa acessá-lo de fora da classe. Tente acessá-la na linha seguinte usando: hero. ; e veja se o método aparece como sugestão
 
+//teste aqui
+
+//SUBCLASSES
+//É uma classe que herda propriedades da superclass(classe pai) e acrescenta novos atributos na mesma.
+
+class heroID extends SecretID {
+    mutant: boolean;
+    multverse: string | number;
+    constructor(heroName: string, name: string, age: number, mutant: boolean, multverse: string | number) {
+        super(heroName, name, age);
+        this.mutant = mutant;
+        this.multverse = multverse;
+    }
+}
+
+const EdBrock = new heroID("Venom", "Ed Brock", 30, false, "Terra " + 145);
+
+console.log(EdBrock);
