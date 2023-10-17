@@ -36,3 +36,11 @@ TUPLAS:
  - Só podem receber a quantidade exata de valores, pré-definidas pela tupla.
  - Caso você coloque mais valores do que a tupla suporta, ocorrerá em erro.
  - Caso a ordem dos valores atribuidos à tupla não sejam equivalentes aos tipos pré-definidos da tupla, ocorrerá em erro.
+
+TS NODE DEV:
+ - O ts node dev é um servidor local que entende TypeScript. Ou seja, com ele instalado não há necessidade de criar builds em cima de builds
+ - Para instalar use: $ npm install ts-node-dev -D 
+ - No Package.json criamos um script novo chamado "start:dev", para reutilizar o comando. E configuramos ele com o $ --
+ - Função:
+  - Criar um servidor local e ficar respawnando builds na memória para não precisar gerar um build a cada teste.
+ - Lembre-se de fechar o servidor com o $ crtl + C >> S
