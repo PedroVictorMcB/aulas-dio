@@ -237,4 +237,7 @@ const numArray = concatArray<number[]>([1, 5], [3]);
 const strArray = concatArray<string[]>(["Pedro", "Peter"], ["Stein"])
 
 // numArray.push("Stein"); //Exemplo de erro. Desmarque o numArray.push para visualizar o erro
-console.log(numArray);
+// console.log(numArray);
+
+let info: string = "Pedrovsky";
+console.log(info);
