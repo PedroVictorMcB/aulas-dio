@@ -169,3 +169,35 @@ charcter1.name = "Ryu";
 // console.log(charcter1.name);
 // charcter1.attack();
 console.log(charcter1);
+/*
+Data Modifiers
+
+Usaando em classes:
+public - todos tem acesso aquele atributo. Comportamento padrão
+private - só pode ser acessado dentro da classe
+protected - O att pode ser acessado apenas pela própria classe e subclasses que herdem esta classe
+
+Usando em Métodos:
+Você pode usar em métodos também
+*/
+
+class SecretID {
+    private heroName: string; //usando o modificador private
+    name: string; //este att está com um midificador público por padrão
+    age: number;
+
+    constructor(heroName: string, name: string, age: number) {
+        this.heroName = heroName;
+        this.name = name;
+        this.age = age;
+    }
+
+    protected helloHero(): void {
+        console.log(`Hello ${this.heroName}! Or I would say ${this.name}?`);
+    }
+}
+
+const hero = new SecretID("Spider-Man", "Miles Morales", 17);
+
+//o modificador protected usando no método "helloHero()" impede que outra pessoa possa acessá-lo de fora da classe. Tente acessá-la na linha seguinte usando: hero. ; e veja se o método aparece como sugestão
+
