@@ -252,11 +252,11 @@ function ExibirNome(target: any) {
 }
 
 //Após usar a função com @ vá em ts.config e habilite experimentalDecorators descomentando
-@ExibirNome
-class Funcionario {}
+// @ExibirNome
+// class Funcionario {}
 
-@ExibirNome
-class DonoDoComercio {}
+// @ExibirNome
+// class DonoDoComercio {}
 
 //Para utilizar o decorator faça como mostrado acima. Declare como você vê e o utilize sempre uma linha acima da classe/objt/variável que servirá como gatilho para ativar o decorator
 
@@ -272,4 +272,41 @@ function apiVersion(version: string) {
 class Api {}
 
 const api = new Api();
-console.log(api.__version);
+// console.log(api.__version);
+
+//ATTRIBUTE DECORATOR
+//Usamos um decorator no atributo de uma classe para criar uma função de validação de números mínimo de caracteres
+
+function minLength(length: number) {
+    return(target: any, key: string) => {
+        let _value = target[key];
+
+        //toda vez que a variável for lida ela vai passar pelo getter
+        const getter = () => _value;
+
+        //toda vez que ela for setada, vai passar pelo setter
+        const setter = (value: string) => {
+            if (value.length < length) {
+                throw new Error(`Tamanho menor do que ${length}`);
+            } else {
+                _value = value;
+            }
+        };
+
+        Object.defineProperty(target, key, {
+            get: getter,
+            set: setter,
+        });
+    };
+}
+class SilentHillCharacter {
+    @minLength(3)
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+const shCharcter = new SilentHillCharacter("Ed.");
+console.log(shCharcter.name);
