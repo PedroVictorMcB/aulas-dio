@@ -44,3 +44,13 @@ TS NODE DEV:
  - Função:
   - Criar um servidor local e ficar respawnando builds na memória para não precisar gerar um build a cada teste.
  - Lembre-se de fechar o servidor com o $ crtl + C >> S
+
+ANGULAR (FRAMEWORK)
+ - É o framework usado pela Google até hoje.
+ - Muito utiliza para criação de SPA (Single Pages Aplications - Aplicações baseadas em componentes)
+ - Usado em sistemas robustos, não é viável utilizar em um sistema simples. Se você notar que seu sistema tem inclinação para desenvolver muito, use-o, se não, Web Standard já é o suficiente
+ - Mercado de Frameworks:
+  - React (Curva de aprendizado baixa - em pouco tempo você aprende a utiliza-lo)
+  - Aurelia (Aproveita melhor o que a comunidade está produzindo)
+  - Vue.js (Não precisa ficar fazendo vários setups. Escalável)
+  - Angular (Útil quando se for trabalhar com uma equipe, onde várias pessoas vão estar trabalhando em cima dele)
