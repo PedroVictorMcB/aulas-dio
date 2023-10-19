@@ -63,6 +63,18 @@ ANGULAR:
   - As informações navegam de filho pra pai e vice e versa
  - DOM: regular DOM
  - Lógica de aplicação e controle de status: Services
+ - APLICAÇÃO ANGULAR:
+  - Montagem:
+     - Injeção de Dependências:
+      - É um padrão de desenvolvimento utilizado em diversos cenários diferentes, é uma estratégia de desenvolvimento muito utilizada.
+      Consiste na utilização dos componentes em um componente raiz/root na aplicação. Este é o componente lógico, não tem partes visuais. No final o root é injetado no HTML.
+ - Estrutura do Frameworks
+  - Out Src:
+   - Arquivos de configuração:
+    - Angular.json: Todos os apontamentos e configurações ficam aqui dentro. Um caminha de uma imagem ou de um certo dado.
+    - Package.json: Configuração do node.
+    - TSConfig.json: Configuração do TypeScript.
+
 
 REACT:
  - Desenvolvedor: Facebook
@@ -77,6 +89,9 @@ REACT:
   - Constituição
    - Components 
     - Vantagens: Isolar cada parte do código para que você consiga diminuir a complexidade do código e ao mesmo tempo você reaproveita ele mesmo.
+    - Características:
+     - É o atomo de sua aplicação. Você cria pedaços, peças singulares para compor uma aplicação completa. Juntando várias components você forma a aplicação completa.
+     - É uma função JS/TS que retorna HTML, CSS e eventos JS. 
     - Características:
      - Elemento visual
      - Customizável
