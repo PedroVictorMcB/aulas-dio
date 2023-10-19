@@ -53,4 +53,65 @@ ANGULAR (FRAMEWORK)
   - React (Curva de aprendizado baixa - em pouco tempo você aprende a utiliza-lo)
   - Aurelia (Aproveita melhor o que a comunidade está produzindo)
   - Vue.js (Não precisa ficar fazendo vários setups. Escalável)
-  - Angular (Útil quando se for trabalhar com uma equipe, onde várias pessoas vão estar trabalhando em cima dele)
+  - Angular (Útil quando se for trabalhar com uma equipe, onde várias pessoas vão estar trabalhando em cima dele. Não se preocupar com setups)
+
+ANGULAR:
+ - Desenvolvedor: Google
+ - Definição: Frameworks (Impera na forma como você irá trabalhar)
+ - Templating: HTML + TS
+ - Binding (como as informações navegam entre componentes): 2 way data binding
+  - As informações navegam de filho pra pai e vice e versa
+ - DOM: regular DOM
+ - Lógica de aplicação e controle de status: Services
+
+REACT:
+ - Desenvolvedor: Facebook
+ - Definição: Library (Conjunto adicional de funções que você pode chamar quando necessário)
+ - Templating: JS + JSX
+ - Binding (como as informações navegam entre componentes): Uni-Directional
+  - As informações passam do pai pro filho 
+ - DOM: Virtual DOM
+ - Lógica de aplicação e controle de status: flux (conceito) e Redux ou context api (controle de estádo)
+
+ WEB APP:
+  - Constituição
+   - Components 
+    - Vantagens: Isolar cada parte do código para que você consiga diminuir a complexidade do código e ao mesmo tempo você reaproveita ele mesmo.
+    - Características:
+     - Elemento visual
+     - Customizável
+     - reutilizável
+   - Gerenciamento de Estados
+    - Função: Responsável por garantir que as informações dos componentes não estejam desincronizadas, facilitam a comunicação de um componente com outro. Gerencia a lógica entre os componentes.
+    - Ferramentas: NGRX, NGXS
+   - Roteamento / routing navegation:
+    - função: Responável pela forma como você navega na aplicação, fazendo a troca de url sem precisar carregar a página, mudando somente os componentes que são mostrados.
+    - Características: Cria a sensação de navegação de página, ao trocar os componentes.
+    -Librarys:
+     - History API (nativo do browser)
+     - React-Router (React)
+     - Vue-Router (Vuejs)
+     - Angular RoutingModule
+   - Renderização / Render:
+    - Função: Responsável por decidir a melhor maneira de acessar e entregar para o browser o componente, pronto para que ele seja desenhado na janela sem compilações.
+    Após a realização das três camadas anteriores Routes, compoenentes e Estados, ele junta tudo e entrega da melhor forma para o browser.
+    - Estratégias de renderização:
+     - 100% Server: Aplicação normal. Dependendo de qual rota a pessoa acessa no back-end, o render entrega aquele html
+     - Part Server - Part Client: O servidor entrega a página acessada, mas tem coisas que serão montadas pelo lado do cliente
+     - 100% Client: Tudo será montado do lado do client
+
+ORGANIZAÇÃO DE PASTAS:
+ - Todos os arquivos de configuração ficam na pasta externa
+ - Todos os arquivos de código ficam na pasta src
+ - Aplicação Básica em Angular:
+  - Dica acesse este url para ver como funciona uma aplicação básica em Angular.
+  
+  https://stackblitz.com/edit/stackblitz-starters-yxxp7d?description=An%20angular-cli%20project%20based%20on%20@angular/animations,%20@angular/common,%20@angular/compiler,%20@angular/core,%20@angular/forms,%20@angular/platform-browser,%20@angular/platform-browser-dynamic,%20@angular/router,%20core-js,%20rxjs,%20tslib%20and%20zone.js&file=src%2Fmain.ts&title=Angular%20Starter
+
+  - Dentro de src:
+   - pasta APP
+    - O primeiro componente: formado por html, ts e css
+   - index.html 
+   - main.ts: configuração da inicialização
+   - polyfills.ts: serve para aumentar a compatibilidade com navegadores antigos
+   - styles.css 
