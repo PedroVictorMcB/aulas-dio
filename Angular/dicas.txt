@@ -1,0 +1,14 @@
+Para instalar o Angular olhe em SETUP na documentação do Angular
+
+https://angular.io/guide/setup-local
+
+Caso Windows:
+ - primeiro sete a política de execução 
+ - depois instale o angular
+ - por fim use $ ng help, para ver todos os comandos do angular
+
+Intalando Life-Cycle:
+ - $ ng new life-cycle. Vai pré-configurar tudo que você precisa no angular.
+ Responda as perguntas necessárias e deixe ele instalar tudo.
+  - .vscode: Contem configurações extrar ao seu vscode
+  - 
