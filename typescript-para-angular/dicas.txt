@@ -74,7 +74,25 @@ ANGULAR:
     - Angular.json: Todos os apontamentos e configurações ficam aqui dentro. Um caminha de uma imagem ou de um certo dado.
     - Package.json: Configuração do node.
     - TSConfig.json: Configuração do TypeScript.
-
+  - Src In:
+   - Arquivos de codificação:
+    - App.modules.ts
+    - TS
+    - HTML
+    - CSS:
+     - O css de um componente é a nível de escopo. Só se aplica a seu próprio componente.
+    - Criando um componente:
+     - Arquivo.ts:
+      - import { Component } from '@angular/core';
+      - @Component ({
+          selector: 'menu-component',
+          template: '<h2> Pedro </h2>', (na prática, tanto o template quanto o styles, são passados como templateUrl e styeleUrls)
+          styles: ['h2{ color: blue}'], (o estilo é sempre um vetor).
+        })
+      - interpolação de dados Angular: pesquise mais sobre
+     - O componente angular precisa fazer parte de um módulo
+      - No arquivo mostrado no vídeo o app.modules.ts é o módulo que arquiva e agrupa todos os componentes. Ou seja, para utilizar seu componente você deverá importar para o arquivo módulo. (Pesquisar mais sobre o assunto, no google. O conteúdo não está batendo com relação a documentação do Angular)
+    - Data Binding: Associação de Dados
 
 REACT:
  - Desenvolvedor: Facebook
