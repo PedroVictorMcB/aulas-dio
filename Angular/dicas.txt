@@ -7,8 +7,15 @@ Caso Windows:
  - depois instale o angular
  - por fim use $ ng help, para ver todos os comandos do angular
 
-Intalando Life-Cycle:
+Life-Cycle:
  - $ ng new life-cycle. Vai pré-configurar tudo que você precisa no angular.
  Responda as perguntas necessárias e deixe ele instalar tudo.
   - .vscode: Contem configurações extrar ao seu vscode
-  - 
+ - life-cycles: visitar documentação Angular >> Understanding Angula >> Component Lifecycle
+ 
+COMANDO $ ng
+- $ ng generate --help:
+lista todos os comandos que generate faz para você
+- $ ng generate component "msg"(título do componente):
+gera um framework do componente para você
+- $ ng serve: sobe a aplicação
