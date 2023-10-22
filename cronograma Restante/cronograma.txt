@@ -1,0 +1,69 @@
+Neste arquivo estou listando o resto do cronograma do curso, pelo menos a parte de fullstack. A parte de java não listei.
+Infelizmente não consegui concluir o curso todo. Mas isso não significa que vou parar pq o curso parou. Por isso fiz esta lista com os tópicos que serião abordados posteriormente para eu continuar meus estudos.
+
+GANHANDO PRODUTIVIDADE COM ANGULAR:
+- LifeCycle Hooks Angular
+ - Os 8 hooks Lifecycle
+  - ngOnInit()
+  - ngOnChanges()
+  - ngDoCheck()
+  - ngAfterContentInit()
+  - ngAfterContentCheck()
+  - ngAfterViewInit()
+  - ngAfterViewCheck()
+  - ngOnDestroy()
+
+SINGLE PAGES APPLICATION COM ANGULAR:
+- Diretivas
+ - Diretivas Estruturais
+ - Diretivas de Atributo
+
+MÓDULOS ANGULA:
+- Definição de MÓDULOS
+- Submodulos
+
+TRABALHANDO COM ROTAS E SERVIÇOS NO ANGULAR:
+- ROTAS
+ - rotas coringa
+ - routerlink
+ - active router
+ - parâmetros e rotas
+ - QueryParams de rotas
+ - Redirecionamento de componente
+ - Rotas children
+ - Parâmetros de rotas children
+
+TRABALHANDO COM SERVICES NO ANGULAR:
+- Introdução ao Service Angular
+ - 3 pilares de SERVICES
+ - Criar um componente estilizado e inteligente
+- Service na Prática
+ - Definição e função de Service
+ - Como injetar um Service
+ - Service x Environment
+ - Módulos HTTP
+ - Observibles
+ - Subscribe
+
+BANCO DE DADOS SQL E NOSQL PARA DEVS:
+- Introdução a banco de dados relacionais
+ - Definição de Banco de Dados relacionais
+ - Conceito Básico SQL
+ - MER e DER: Modelagem de bancos de dados
+ - operações CRUD
+  - insert
+  - select
+  - update
+  - delete
+ - chaves primárias e estrangeiras
+- Normalização de dados
+- Introdução a banco de dados não relacionais
+ - Conceitos básicos de bancos de dados não relacionais
+ - Tipos NOSQL
+ - Introdução ao MongoDB
+ - mongoDB Atlas
+ - Modelagem de banco de dados usando documentos
+ - Modelagem de banco de dados eficientes e escaláveis
+ - Operações no mongoDB
+ - Redis
+
