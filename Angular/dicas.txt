@@ -15,6 +15,12 @@ Life-Cycle:
  Responda as perguntas necessárias e deixe ele instalar tudo.
   - .vscode: Contem configurações extrar ao seu vscode
  - life-cycles: visitar documentação Angular >> Understanding Angula >> Component Lifecycle
+ - Adicionar aquivos: 
+  - .browserslistrc
+  - karma.conf.js
+  - src >> polyfills.ts 
+  - src >> test.ts 
+  - A pasta enviorment dentro de src é utilizada para salvar variáveis globais.
  
 COMANDO $ ng
 - $ ng generate --help:
