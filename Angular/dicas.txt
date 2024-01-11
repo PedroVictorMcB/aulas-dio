@@ -2,6 +2,9 @@ Para instalar o Angular olhe em SETUP na documentação do Angular
 
 https://angular.io/guide/setup-local
 
+Para desinstalar o Angular:
+ - $ npm uninstall -g @angular/cli
+
 Caso Windows:
  - primeiro sete a política de execução 
  - depois instale o angular
