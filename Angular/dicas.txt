@@ -28,3 +28,19 @@ lista todos os comandos que generate faz para você
 - $ ng generate component "msg"(título do componente):
 gera um framework do componente para você
 - $ ng serve: sobe a aplicação
+
+
+HOOKS
+
+- $ ngOnInit (dicas no programa)
+- $ ngOnChanges (dicas no programa)
+- $ ngDoCheck:
+ O evento verifica o componente com auxílio de subeventos.
+ - $ ngAfterContentInit:
+  Evento verifica o conteúdo após projetado
+ - $ ngAfterContentChecked:
+  Evento é executado depois que o conteúdo do componente é verificado pelo mecanismo de detecção de alteração do Angular
+ - $ ngAfterViewInit:
+  Evento executa depois que o componente é totalmente inicializado (web standard completo)
+ - $ ngAfterViewCheked:
+  Evento é executado após a verificação do algoritmo de alteração do Angular, na visualização do componente.
