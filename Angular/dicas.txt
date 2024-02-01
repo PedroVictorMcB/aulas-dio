@@ -37,10 +37,17 @@ HOOKS
 - $ ngDoCheck:
  O evento verifica o componente com auxílio de subeventos.
  - $ ngAfterContentInit:
-  Evento verifica o conteúdo após projetado
+  Evento verifica o conteúdo após projetado/iniciado.
  - $ ngAfterContentChecked:
-  Evento é executado depois que o conteúdo do componente é verificado pelo mecanismo de detecção de alteração do Angular
+  Evento é executado depois que o conteúdo do componente é verificado pelo mecanismo de detecção de alteração do Angular. A cada alteração o conteúdo é checado novamente.
  - $ ngAfterViewInit:
-  Evento executa depois que o componente é totalmente inicializado (web standard completo)
+  Evento executa depois que o componente é totalmente inicializado (web standard completo).
  - $ ngAfterViewCheked:
-  Evento é executado após a verificação do algoritmo de alteração do Angular, na visualização do componente.
+  Evento é executado após a verificação do algoritmo de alteração do Angular, na visualização do componente. Fazer final após alteração de conteúdo, a camada de visualização é verificada novamente.
+
+ - $ ngOnDestroy:
+  Evento destroi o componente quando executado. Exemplos de uso em /app.
+
+ - Resumo dos hooks:
+  Os eventos de checks são importantes para verificar o funcionamento correto dos componentes.
+  O evento OnDestroy é importante para destruir componente não utilizados, visando ganho de memória em seu app.
