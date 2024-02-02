@@ -51,3 +51,21 @@ HOOKS
  - Resumo dos hooks:
   Os eventos de checks são importantes para verificar o funcionamento correto dos componentes.
   O evento OnDestroy é importante para destruir componente não utilizados, visando ganho de memória em seu app.
+
+DIRETIVAS:
+
+-$ *ngIf="" :
+ - É uma diretiva booleana, utilizado para decidir se um elemento ou componente aparece ou não em tela.
+ - É possível utilizar o ngIf com Data Binding também.
+
+-$ *ng-Template:
+ - Funciona como um Else para as diretivas. Se usá-lo após o ngIf.
+ - É possível apelidá-lo usando o # (ng-Template #name)
+
+-$ *ngFor:
+ - Funciona como um ForEach. Exemplo em card.component.html
+
+- Conceito de Reatividade:
+ Exemplos em Card.Component.html e .ts com o método add().
+
+ A reatividade acontece caso você conecte um método com outro, algo como um efeito dominó.
