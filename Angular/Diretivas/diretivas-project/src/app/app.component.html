@@ -1,3 +1,7 @@
-<app-card></app-card>
+<app-card *ngIf="isAliveCard; else cardFail"></app-card>
+
+<ng-template #cardFail>
+  <p>If you're seen this message, something goes wrong with APP-CARD COMPONENT</p>
+</ng-template>
 
 <router-outlet></router-outlet>
