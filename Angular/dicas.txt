@@ -64,8 +64,21 @@ DIRETIVAS:
 
 -$ *ngFor:
  - Funciona como um ForEach. Exemplo em card.component.html
+ - Funciona como um for normal utilizando uma váriavel de index. Exemplo em card.component.html
 
 - Conceito de Reatividade:
  Exemplos em Card.Component.html e .ts com o método add().
 
  A reatividade acontece caso você conecte um método com outro, algo como um efeito dominó.
+
+-$ *ngSwitchCase:
+ - Serve para criar elementos a partir de condições pré-definidas. Exemplo em card.component.html e card.component.ts.
+ - *ngSwitchCaseDefault:
+  - Serve para padronizar um opção padrão, caso nenhum das opções de switchCase sejam atendidas esta opção é ativada
+
+- DIRETIVAS DE ATRIBUTOS:
+ -$ *ngClass:
+  Pode ser usada para alterar um elemento dinâmicamente atravez do uso de uma classe. Exemplo em ./comp-atributos . No caso usamos um binding da própriedade estilo no arquivo TS para modificar pelo ngClass em HTML. Usamos um botão com o método click para mudar a cor dinâmicamente.
+
+-$ *ngStyle:
+ Altera o estilo do componente diretamente através de atributos pré-definidos no arquivo TS. Se quiser adicionar dinâmicidade crie um método. Exemplos em ./comp-atributos.
